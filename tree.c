@@ -79,7 +79,7 @@ int read_tree_at(struct repository *r,
 		strbuf_add(base, entry.path, len);
 		strbuf_addch(base, '/');
 		retval = read_tree_at(r, lookup_tree(r, &oid),
-				      base, depth + 1, pathspec,
+				      base, pathspec,
 				      fn, context);
 		strbuf_setlen(base, oldlen);
 		if (retval)
